@@ -1,0 +1,26 @@
+﻿@model IEnumerable<OdgovoriRoditelja>
+
+<h3 class="bg-primary p-2 text-white text-center">Ovo je lista ljudi koji su prijavili prisustvo</h3>
+
+<div class="container-fluid">
+    <div class="row p-1">
+        <div class="col font-weight-bold">Ime deteta</div>
+        <div class="col font-weight-bold">Ime roditelja</div>
+        <div class="col font-weight-bold">Email</div>
+        <div class="col font-weight-bold">Telefon</div>
+        <div class="col font-weight-bold">Viber?</div>
+        <div class="col font-weight-bold">Dolazi?</div>
+    </div>
+    @foreach (OdgovoriRoditelja r in Model)    
+    {
+        <div class="row p-1">
+            <div class="col">@r.ImeDeteta</div>
+            <div class="col">@r.ImeRoditelja</div>
+            <div class="col">@r.Email</div>
+            <div class="col">@r.Telefon</div>
+            <div class="col">@(r.Viber == true ? "Da" : "Ne")</div>
+            <div class="col">@(r.PotvrdaDolaska == true ? "Da" : "Ne")</div>
+        </div>
+    }
+    Kliknite <a asp-action="Index">ovde</a> da se vratite na naslovnu stranu.
+</div>

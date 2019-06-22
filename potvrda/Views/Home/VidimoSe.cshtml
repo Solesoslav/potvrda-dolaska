@@ -1,0 +1,18 @@
+﻿@model  OdgovoriRoditelja
+
+<div class="text-center mt-3">
+    <h1>Hvala vam, @Model.ImeRoditelja!</h1>
+    @if (Model.PotvrdaDolaska == true)
+    {
+        <div>
+            Odlično, jedva čekamo da se družimo zajedno.
+        </div>
+    }
+    else
+    {
+        <div>
+            Žao nam je što nam se vaš mališan neće moći pridružiti. Hvala vam na javljanju.
+        </div>
+    }
+    Kliknite <a asp-action="ListaOdgovora">ovde</a> da vidite ko još dolazi.
+</div>
